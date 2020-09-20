@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LGAudioSwitch</name>
+    </assembly>
+    <members>
+        <member name="T:LGAudioSwitch.CoreAudio">
+            <summary>
+            Main implementation for LGAudioSwitch
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudio.EnumerateAudioDevices(LGAudioSwitch.Models.AudioDeviceType)">
+            <summary>
+            Enumerates the <see cref="T:LGAudioSwitch.Models.AudioDevice"/> objects in the current environment
+            </summary>
+            <param name="audioDeviceType">The type of devices to enumerate</param>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudio.GetDefaultInputAudioDevice">
+            <summary>
+            Gets the default <see cref="T:LGAudioSwitch.Models.AudioDevice"/> for input
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudio.GetDefaultOutputAudioDevice">
+            <summary>
+            Gets the default <see cref="T:LGAudioSwitch.Models.AudioDevice"/> for output
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudio.SetDefaultAudioDevice(LGAudioSwitch.Models.AudioDevice)">
+            <summary>
+            Sets the default <see cref="T:LGAudioSwitch.Models.AudioDevice"/> for this environement
+            </summary>
+            <param name="audioDevice">The <see cref="T:LGAudioSwitch.Models.AudioDevice"/> to set as default</param>
+        </member>
+        <member name="T:LGAudioSwitch.CoreAudioInternal.EDeviceState">
+            <summary>
+                Device State
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.EDeviceState.Active">
+            <summary>
+                DEVICE_STATE_ACTIVE
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.EDeviceState.Disabled">
+            <summary>
+                DEVICE_STATE_DISABLED
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.EDeviceState.NotPresent">
+            <summary>
+                DEVICE_STATE_NOTPRESENT
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.EDeviceState.Unplugged">
+            <summary>
+                DEVICE_STATE_UNPLUGGED
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.EDeviceState.All">
+            <summary>
+                DEVICE_STATEMASK_ALL
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.PropertyKeys.PKEY_DEVICE_FRIENDLY_NAME">
+            <summary>
+            PKEY _Device_FriendlyName
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.CoreAudioInternal.PropertyKeys.PKEY_DEVICE_DESCRIPTION">
+            <summary>
+            PKEY _Device_Description
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudioInternal.PropVariant.FromLong(System.Int64)">
+            <summary>
+                Creates a new PropVariant containing a long value
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudioInternal.PropVariant.GetBlob">
+            <summary>
+                Helper method to gets blob data
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.CoreAudioInternal.PropVariant.GetBlobAsArrayOf``1">
+            <summary>
+                Interprets a blob as an array of structs
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.CoreAudioInternal.PropVariant.DataType">
+            <summary>
+                Gets the type of data in this PropVariant
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.CoreAudioInternal.PropVariant.Value">
+            <summary>
+                Property value
+            </summary>
+        </member>
+        <member name="T:LGAudioSwitch.Models.AudioDevice">
+            <summary>
+            The <see cref="T:LGAudioSwitch.Models.AudioDevice"/> implementation
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.Models.AudioDevice.Id">
+            <summary>
+            The ID of this <see cref="T:LGAudioSwitch.Models.AudioDevice"/>
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.Models.AudioDevice.FriendlyName">
+            <summary>
+            The friendly name of this <see cref="T:LGAudioSwitch.Models.AudioDevice"/>
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.Models.AudioDevice.Description">
+            <summary>
+            The description of this <see cref="T:LGAudioSwitch.Models.AudioDevice"/>
+            </summary>
+        </member>
+        <member name="P:LGAudioSwitch.Models.AudioDevice.AudioDeviceType">
+            <summary>
+            The type of <see cref="T:LGAudioSwitch.Models.AudioDevice"/>
+            </summary>
+        </member>
+        <member name="M:LGAudioSwitch.Models.AudioDevice.Equals(LGAudioSwitch.Models.AudioDevice,LGAudioSwitch.Models.AudioDevice)">
+            <summary>
+            Determines whether two instances and another specified <see cref="T:LGAudioSwitch.Models.AudioDevice"/> object have
+            the same value.
+            </summary>
+            <param name="x">The <see cref="T:LGAudioSwitch.Models.AudioDevice"/> to compare from</param>
+            <param name="y">The <see cref="T:LGAudioSwitch.Models.AudioDevice"/> to compare to</param>
+            <returns>true if they are equal, else false</returns>
+        </member>
+        <member name="M:LGAudioSwitch.Models.AudioDevice.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="obj">The object to compare</param>
+            <returns>true if they are equal, else false</returns>
+        </member>
+        <member name="M:LGAudioSwitch.Models.AudioDevice.GetHashCode(LGAudioSwitch.Models.AudioDevice)">
+            <summary>
+            Returns the hash code for an object
+            </summary>
+            <param name="obj">The object to hash</param>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:LGAudioSwitch.Models.AudioDevice.GetHashCode">
+            <summary>
+            Returns the hash code for this object
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:LGAudioSwitch.Models.AudioDevice.ToString">
+            <summary>
+            A string that represents the current object
+            </summary>
+        </member>
+        <member name="T:LGAudioSwitch.Models.AudioDeviceType">
+            <summary>
+            Enumeration to specify the device type for an <see cref="T:LGAudioSwitch.Models.AudioDevice"/>
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.Models.AudioDeviceType.Output">
+            <summary>
+            Output type
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.Models.AudioDeviceType.Input">
+            <summary>
+            Input type
+            </summary>
+        </member>
+        <member name="F:LGAudioSwitch.Models.AudioDeviceType.All">
+            <summary>
+            All types
+            </summary>
+        </member>
+    </members>
+</doc>
